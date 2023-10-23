@@ -1,0 +1,14 @@
+.main {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 20px;
+  .icon {
+    font-size: 20px;
+    cursor: pointer;
+  }
+  .avatar {
+    box-shadow: 0 0 20px 15px rgba(#fff, 0.5);
+  }
+}

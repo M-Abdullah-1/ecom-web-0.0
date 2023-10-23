@@ -1,0 +1,40 @@
+.container {
+  margin: 0 20px;
+  .brandName {
+    margin-bottom: 10px;
+    font-size: 30px;
+    padding: 10px;
+  }
+  ul {
+    padding-top: 20px;
+    list-style: none;
+    li {
+      cursor: pointer;
+      margin: 10px 0;
+      border-radius: 15px;
+      &:hover {
+        box-shadow: 0 0 10px 10px rgba(#fff, 0.2);
+      }
+      .activeLink {
+        border-radius: 15px;
+        box-shadow: 0 0 10px 10px rgba(#fff, 0.2);
+      }
+      .navLink {
+        border-radius: 15px;
+        display: flex;
+        gap: 20px;
+        padding: 10px;
+        width: 100%;
+        text-decoration: none;
+      }
+      span {
+        font-size: 18px;
+        color: rgba(#000, 0.8);
+      }
+      .icon {
+        font-size: 18px;
+        color: rgba(#000, 0.8);
+      }
+    }
+  }
+}
