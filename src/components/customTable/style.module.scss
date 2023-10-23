@@ -1,0 +1,46 @@
+.table {
+  padding: 10px;
+  background-color: rgba(#fff, 0.8);
+  backdrop-filter: blur(20px);
+  border-radius: 10px;
+  table {
+    width: 100%;
+    // border-collapse: collapse;
+  }
+
+  th,
+  td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+    .firstCol {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+  }
+
+  .actionBox {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    .icon {
+      cursor: pointer;
+    }
+  }
+
+  th {
+    background-color: #f2f2f2;
+  }
+
+  tr:hover {
+    background-color: #f5f5f5;
+  }
+
+  //   pagination style
+  .paginationBox {
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+  }
+}

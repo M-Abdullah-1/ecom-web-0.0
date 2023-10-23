@@ -28,6 +28,7 @@
     .content {
       flex: 1;
       border: 2px dashed gray;
+      overflow-y: auto;
     }
   }
 }

@@ -1,5 +1,12 @@
+import CustomTable from "../../components/customTable/CustomTable";
+import style from "./style.module.scss";
+
 const OrderPage = () => {
-  return <div>OrderPage</div>;
+  return (
+    <div className={style.main}>
+      <CustomTable />
+    </div>
+  );
 };
 
 export default OrderPage;
