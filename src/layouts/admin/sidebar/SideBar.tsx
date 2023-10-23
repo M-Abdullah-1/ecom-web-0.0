@@ -3,6 +3,7 @@ import {
   CreditCardOutlined,
   DeliveredProcedureOutlined,
   HomeFilled,
+  LogoutOutlined,
   SettingOutlined,
   ShoppingCartOutlined,
   ShoppingOutlined,
@@ -95,6 +96,12 @@ const SideBar = () => {
             <SettingOutlined className={style.icon} />
             <span>Setting</span>
           </NavLink>
+        </li>
+        <li>
+          <div className={style.navLink}>
+            <LogoutOutlined className={style.icon} />
+            <span>Logout</span>
+          </div>
         </li>
       </ul>
     </div>
