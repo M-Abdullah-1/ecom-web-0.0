@@ -2,7 +2,7 @@ import {
   BarChartOutlined,
   CreditCardOutlined,
   DeliveredProcedureOutlined,
-  HomeFilled,
+  HomeOutlined,
   LogoutOutlined,
   SettingOutlined,
   ShoppingCartOutlined,
@@ -27,7 +27,7 @@ const SideBar = () => {
             to="/admin"
             end
           >
-            <HomeFilled className={style.icon} />
+            <HomeOutlined className={style.icon} />
             <span>Home</span>
           </NavLink>
         </li>
