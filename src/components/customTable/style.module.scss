@@ -18,14 +18,13 @@
       align-items: center;
       gap: 10px;
     }
-  }
-
-  .actionBox {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    .icon {
-      cursor: pointer;
+    .actionBox {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      .icon {
+        cursor: pointer;
+      }
     }
   }
 
