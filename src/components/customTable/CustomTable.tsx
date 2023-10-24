@@ -3,10 +3,17 @@ import {
   EditOutlined,
   EyeOutlined,
   MoreOutlined,
-  ReadOutlined,
 } from "@ant-design/icons";
 import style from "./style.module.scss";
-import { Pagination, Image, Modal, Button, Dropdown } from "antd";
+import {
+  Pagination,
+  Image,
+  Modal,
+  Dropdown,
+  Checkbox,
+  DatePicker,
+  Tag,
+} from "antd";
 import type { MenuProps } from "antd";
 import pic00 from "./../../assets/product/images00.jpeg";
 import pic01 from "./../../assets/product/images01.jpeg";
@@ -60,6 +67,8 @@ const data = [
     src: pic02,
   },
 ];
+
+const { RangePicker } = DatePicker;
 
 const config = {
   title: "Warnning!",
@@ -117,9 +126,13 @@ const CustomTable = () => {
 
   return (
     <div className={style.table}>
+      <div className={style.header}>
+        <RangePicker />
+      </div>
       <table>
         <thead>
           <tr>
+            <th></th>
             <th>Order</th>
             <th>Product</th>
             <th>Date</th>
@@ -132,6 +145,9 @@ const CustomTable = () => {
         <tbody>
           {data.map((el) => (
             <tr key={el.id}>
+              <td>
+                <Checkbox />
+              </td>
               <td>{el.id}</td>
               <td>
                 <div className={style.firstCol}>
@@ -142,7 +158,9 @@ const CustomTable = () => {
               <td>{el.date}</td>
               <td>{el.items}</td>
               <td>${el.price}</td>
-              <td>{el.status}</td>
+              <td>
+                <Tag color="processing">{el.status}</Tag>
+              </td>
               <td>
                 <div className={style.actionBox}>
                   {/* <div className={style.icon}>

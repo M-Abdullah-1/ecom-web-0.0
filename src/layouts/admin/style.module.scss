@@ -15,10 +15,12 @@
   display: flex;
 
   .sidebar {
+    // display: none;
     width: 280px;
   }
   .main {
-    width: 100%;
+    // width: 100%;
+    flex: 1;
     display: flex;
     flex-direction: column;
     .header {
@@ -27,7 +29,7 @@
     }
     .content {
       flex: 1;
-      border: 2px dashed gray;
+      // border: 2px dashed gray;
       overflow-y: auto;
     }
   }
