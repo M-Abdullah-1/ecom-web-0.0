@@ -1,6 +1,5 @@
-import { Avatar, Badge, Button, Drawer, Space } from "antd";
-import profilePic from "./../../../assets/profilePic.jpg";
 import { Avatar, Badge, Drawer } from "antd";
+import profilePic from "./../../../assets/profilePic.jpg";
 import style from "./style.module.scss";
 import { BellOutlined, MenuOutlined, MessageOutlined } from "@ant-design/icons";
 import type { DrawerProps } from "antd/es/drawer";
