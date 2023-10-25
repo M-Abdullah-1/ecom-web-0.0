@@ -15,7 +15,7 @@
   display: flex;
 
   .sidebar {
-    // display: none;
+    padding: 0 20px;
     width: 280px;
   }
   .main {
@@ -32,5 +32,11 @@
       // border: 2px dashed gray;
       overflow-y: auto;
     }
+  }
+}
+
+@media (max-width: 950px) {
+  .sidebar {
+    display: none;
   }
 }
