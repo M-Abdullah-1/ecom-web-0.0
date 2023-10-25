@@ -2,13 +2,31 @@
   padding: 10px;
   display: flex;
   align-items: center;
-  justify-content: end;
-  gap: 20px;
+  justify-content: space-between;
+
+  .left {
+    font-size: 20px;
+    cursor: pointer;
+  }
+  .right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
   .icon {
     font-size: 20px;
     cursor: pointer;
   }
   .avatar {
     box-shadow: 0 0 20px 15px rgba(#fff, 0.5);
+  }
+}
+
+@media (min-width: 950px) {
+  .left {
+    display: none;
+  }
+  .main {
+    justify-content: end;
   }
 }
