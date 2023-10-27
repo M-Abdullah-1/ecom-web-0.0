@@ -1,6 +1,6 @@
-import { HeartOutlined } from "@ant-design/icons";
+import { HeartOutlined, ShoppingCartOutlined } from "@ant-design/icons";
 import style from "./style.module.scss";
-import { Image } from "antd";
+import { Button, Image } from "antd";
 import pic0 from "./../../../assets/product/images00.jpeg";
 import pic1 from "./../../../assets/product/images01.jpeg";
 import pic2 from "./../../../assets/product/images02.jpeg";
@@ -101,7 +101,8 @@ const Index = () => {
                 </div>
                 <div className={style.footer}>
                   <div className={style.icon}>
-                    <HeartOutlined />
+                    <Button shape="circle" icon={<HeartOutlined />} danger />
+                    <Button shape="circle" icon={<ShoppingCartOutlined />} />
                   </div>
                   <div className={style.price}>
                     <span>${el.price}</span>
@@ -134,7 +135,8 @@ const Index = () => {
                 </div>
                 <div className={style.footer}>
                   <div className={style.icon}>
-                    <HeartOutlined />
+                    <Button shape="circle" icon={<HeartOutlined />} danger />
+                    <Button shape="circle" icon={<ShoppingCartOutlined />} />
                   </div>
                   <div className={style.price}>
                     <span>${el.price}</span>
