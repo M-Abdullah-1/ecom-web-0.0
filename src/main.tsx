@@ -10,6 +10,8 @@ import ShipmentPage from "./pages/admin/Shipment";
 import ReportPage from "./pages/admin/Report";
 import ProductPage from "./pages/admin/Product";
 import SettingPage from "./pages/admin/Setting";
+import UserLayout from "./layouts/home";
+import Home from "./pages/user/Home";
 
 const router = createBrowserRouter([
   {
@@ -27,7 +29,11 @@ const router = createBrowserRouter([
   },
   {
     path: "/",
-    element: <h1>Home</h1>,
+    element: <UserLayout />,
+    children: [
+      { path: "", element: <Home /> },
+      { path: "cart", element: <Home /> },
+    ],
   },
 ]);
 
