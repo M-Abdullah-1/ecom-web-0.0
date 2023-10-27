@@ -11,7 +11,8 @@ import ReportPage from "./pages/admin/Report";
 import ProductPage from "./pages/admin/Product";
 import SettingPage from "./pages/admin/Setting";
 import UserLayout from "./layouts/home";
-import Home from "./pages/user/Home";
+import Home from "./pages/user/home";
+import Cart from "./pages/user/cart";
 
 const router = createBrowserRouter([
   {
@@ -32,7 +33,7 @@ const router = createBrowserRouter([
     element: <UserLayout />,
     children: [
       { path: "", element: <Home /> },
-      { path: "cart", element: <Home /> },
+      { path: "cart", element: <Cart /> },
     ],
   },
 ]);
