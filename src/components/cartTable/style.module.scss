@@ -1,16 +1,56 @@
 .container {
-  border: 2px dashed gray;
   margin: 20px auto;
-  padding: 10px;
   overflow-x: auto;
   width: 100%;
   max-width: 700px;
-  .testBox {
+  .tableBox {
     width: 100%;
     min-width: 500px;
-    border: 2px dashed red;
     .table {
       width: 100%;
+      border-collapse: collapse;
+      tr th:first-child {
+        text-align: left;
+        padding-left: 10px;
+      }
+      td {
+        border-bottom: 2px solid rgba(128, 128, 128, 0.463);
+        padding: 10px 0;
+      }
+      th {
+        text-align: center;
+      }
+      .item {
+        display: flex;
+        gap: 10px;
+        padding-left: 10px;
+
+        // justify-content: center;
+        .image {
+          width: 50px;
+        }
+        .title {
+          font-size: 20px;
+          font-weight: bold;
+          color: gray;
+        }
+      }
+      .price {
+        display: flex;
+        justify-content: center;
+      }
+      .quantity {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+      }
+      .total {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+      }
     }
   }
 }
