@@ -1,4 +1,4 @@
-import { HeartOutlined, ShoppingCartOutlined } from "@ant-design/icons";
+import { HeartOutlined } from "@ant-design/icons";
 import style from "./style.module.scss";
 import { Button, Image } from "antd";
 import pic0 from "./../../../assets/product/images00.jpeg";
@@ -10,6 +10,7 @@ import pic5 from "./../../../assets/product/images05.jpeg";
 import pic6 from "./../../../assets/product/images06.jpeg";
 import pic7 from "./../../../assets/product/images07.jpeg";
 import pic8 from "./../../../assets/product/images08.jpeg";
+import { useNavigate } from "react-router-dom";
 
 const productData = [
   {
@@ -72,6 +73,11 @@ const featuredProductData = [
 ];
 
 const Index = () => {
+  const navigate = useNavigate();
+  const productNavigateHandler = (id: number) => {
+    navigate(`/product/${id}`);
+  };
+
   return (
     <div className={style.container}>
       <div className={style.heroSection}>
@@ -85,7 +91,13 @@ const Index = () => {
         </div>
         <div className={style.productRow}>
           {productData.map((el) => (
-            <div className={style.box} key={el.id}>
+            <div
+              onClick={() => {
+                productNavigateHandler(+el.id);
+              }}
+              className={style.box}
+              key={el.id}
+            >
               <div className={style.pic}>
                 <Image
                   style={{
