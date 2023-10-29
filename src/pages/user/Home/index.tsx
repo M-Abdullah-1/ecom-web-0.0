@@ -92,6 +92,7 @@ const Index = () => {
                     borderTopLeftRadius: "10px",
                     borderTopRightRadius: "10px",
                   }}
+                  preview={false}
                   src={el.pic}
                 />
               </div>
@@ -102,7 +103,6 @@ const Index = () => {
                 <div className={style.footer}>
                   <div className={style.icon}>
                     <Button shape="circle" icon={<HeartOutlined />} danger />
-                    <Button shape="circle" icon={<ShoppingCartOutlined />} />
                   </div>
                   <div className={style.price}>
                     <span>${el.price}</span>
@@ -126,6 +126,7 @@ const Index = () => {
                     borderTopLeftRadius: "10px",
                     borderTopRightRadius: "10px",
                   }}
+                  preview={false}
                   src={el.pic}
                 />
               </div>
@@ -136,7 +137,6 @@ const Index = () => {
                 <div className={style.footer}>
                   <div className={style.icon}>
                     <Button shape="circle" icon={<HeartOutlined />} danger />
-                    <Button shape="circle" icon={<ShoppingCartOutlined />} />
                   </div>
                   <div className={style.price}>
                     <span>${el.price}</span>
