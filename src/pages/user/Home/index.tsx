@@ -82,7 +82,7 @@ const Index = () => {
     <div className={style.container}>
       <div className={style.heroSection}>
         <div className={style.titleBox}>
-          <h1>Your Dream Products, Just a Click Away</h1>
+          <h1>Your Dream Shoe, Just a Click Away</h1>
         </div>
       </div>
       <div className={style.productSection}>

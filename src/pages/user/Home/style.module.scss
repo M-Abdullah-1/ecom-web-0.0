@@ -2,12 +2,13 @@
   .heroSection {
     padding: 0 50px;
     height: 500px;
-    background: url("./../../../assets//bg02.jpg");
+    background: url("./../../../assets//bg03.jpg");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     display: flex;
     align-items: center;
+    justify-content: end;
     .titleBox {
       border-radius: 10px;
       background: rgba(#fff, 0.5);
