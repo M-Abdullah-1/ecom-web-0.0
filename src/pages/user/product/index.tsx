@@ -60,7 +60,7 @@ const Index = () => {
               ]}
             >
               <Image
-                width={300}
+                className={style.mainImage}
                 src="https://gw.alipayobjects.com/zos/antfincdn/cV16ZqzMjW/photo-1473091540282-9b846e7965e3.webp"
               />
             </Image.PreviewGroup>
