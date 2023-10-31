@@ -1,7 +1,15 @@
 import { useParams } from "react-router-dom";
 import style from "./style.module.scss";
-import { Button, Image, Rate } from "antd";
+import { Button, Image, Progress, Rate } from "antd";
 import { HeartOutlined } from "@ant-design/icons";
+
+const reviewRatingData = [
+  { id: `${Math.random()}`, star: "5", percent: 89.9, noOfReviews: 48 },
+  { id: `${Math.random()}`, star: "4", percent: 69.9, noOfReviews: 18 },
+  { id: `${Math.random()}`, star: "3", percent: 0, noOfReviews: 0 },
+  { id: `${Math.random()}`, star: "2", percent: 19.9, noOfReviews: 7 },
+  { id: `${Math.random()}`, star: "1", percent: 3.9, noOfReviews: 4 },
+];
 
 const Index = () => {
   const params = useParams();
@@ -68,6 +76,57 @@ const Index = () => {
               />
             </div>
           </div>
+        </div>
+      </div>
+      <div className={style.productDetailSection}>
+        <div className={style.productDetailBox}>
+          <h1>Details</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum quas
+            doloribus voluptates blanditiis ratione aspernatur rem quae nam
+            sapiente facilis expedita tempora dolor natus ex consequatur
+            reiciendis quo iusto similique, sint voluptatem officiis sunt
+            laudantium labore? Sapiente non nemo earum similique porro sit
+            aperiam repellendus.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut in
+            itaque neque dicta qui labore ut ducimus eligendi quisquam, soluta
+            libero repellat hic illum voluptas numquam fugiat laudantium est!
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores,
+            esse tenetur labore molestiae similique aliquam assumenda qui
+            architecto quia mollitia est, sed magni minima velit quod laudantium
+            soluta repellat dignissimos placeat blanditiis non. Adipisci
+            voluptatum dolores inventore illo, alias sequi quia, assumenda
+            laboriosam ea non numquam aliquid doloremque est suscipit
+            perferendis repellendus praesentium vero hic. Consequuntur,
+            molestias? Expedita, ducimus autem!
+          </p>
+        </div>
+        <div className={style.reviewDetailBox}>
+          <div className={style.reviewRow}>
+            <Rate
+              className={style.reviewStars}
+              disabled
+              allowHalf
+              defaultValue={4.5}
+            />
+            <span className={style.reviewNumber}>4.8</span>
+          </div>
+          {reviewRatingData.map((el) => (
+            <div className={style.progressRow} key={el.id}>
+              <span className={style.star}>{el.star}</span>
+              <Progress
+                percent={el.percent}
+                status="active"
+                showInfo={false}
+                strokeColor={{ from: "#108ee9", to: "#87d068" }}
+              />
+              <span className={style.reviewNo}>{el.noOfReviews}</span>
+            </div>
+          ))}
         </div>
       </div>
     </div>
