@@ -1,5 +1,5 @@
 .container {
-  border: 2px dashed gray;
+  // border: 2px dashed gray;
   margin-top: 70px;
   .selectionBox {
     padding: 10px;
@@ -116,6 +116,61 @@
         }
         .reviewNo {
           font-weight: bold;
+        }
+      }
+    }
+  }
+
+  .reviewSection {
+    // border: 2px dashed gray;
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap;
+    align-items: start;
+    padding: 0 50px;
+    margin-bottom: 50px;
+    .innerBox {
+      // box-shadow: 0 0 10px 0 rgba(#000, 0.1);
+      // padding: 20px;
+      border-radius: 10px;
+      width: 100%;
+      max-width: 700px;
+      .reviewMainTitle {
+        margin-bottom: 20px;
+        display: inline-block;
+        padding: 10px 20px;
+        border-bottom: 2px solid rgba(#000, 0.8);
+      }
+    }
+    .reviewBox {
+      display: flex;
+      gap: 10px;
+      box-shadow: 0 0 10px 0 rgba(#000, 0.1);
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      .reveiwTextSection {
+        .title {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          margin-bottom: 7px;
+          .userName {
+            color: #000;
+          }
+          .time {
+            color: gray;
+            font-size: 13px;
+          }
+        }
+        .reviewRating {
+          margin-bottom: 10px;
+        }
+        .reviewText {
+          font-size: 15px;
+          font-weight: 600;
+          letter-spacing: 0.7px;
+          // font-weight: bold;
         }
       }
     }

@@ -1,7 +1,15 @@
 import { useParams } from "react-router-dom";
 import style from "./style.module.scss";
-import { Button, Image, Progress, Rate } from "antd";
-import { HeartOutlined } from "@ant-design/icons";
+import { Avatar, Button, Image, Progress, Rate } from "antd";
+import {
+  DislikeOutlined,
+  HeartOutlined,
+  LikeOutlined,
+  UserOutlined,
+} from "@ant-design/icons";
+import profilePic00 from "./../../../assets/user/image00.jpeg";
+import profilePic01 from "./../../../assets/user/image01.jpeg";
+import profilePic02 from "./../../../assets/user/image02.jpeg";
 
 const reviewRatingData = [
   { id: `${Math.random()}`, star: "5", percent: 89.9, noOfReviews: 48 },
@@ -9,6 +17,33 @@ const reviewRatingData = [
   { id: `${Math.random()}`, star: "3", percent: 0, noOfReviews: 0 },
   { id: `${Math.random()}`, star: "2", percent: 19.9, noOfReviews: 7 },
   { id: `${Math.random()}`, star: "1", percent: 3.9, noOfReviews: 4 },
+];
+
+const reviewText = [
+  {
+    id: `${Math.random()}`,
+    name: "John",
+    rate: 3.7,
+    time: "today",
+    pic: profilePic00,
+    text: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti, illo. Inventore veritatis, voluptatem fugiat distinctio aspernatur, illum ab eum architecto velit officia quam eligendi necessitatibus nobis expedita placeat blanditiis? Voluptatem!",
+  },
+  {
+    id: `${Math.random()}`,
+    name: "Alex",
+    rate: 4.7,
+    time: "yesterday",
+    pic: profilePic01,
+    text: "Adipisicing elit. Deleniti, illo. Inventore veritatis, voluptatem fugiat distinctio aspernatur, illum ab eum architecto necessitatibus nobis expedita placeat blanditiis? Voluptatem!",
+  },
+  {
+    id: `${Math.random()}`,
+    name: "Lee",
+    rate: 2.7,
+    time: "yesterday",
+    pic: profilePic02,
+    text: "Lllum ab eum architecto velit officia quam eligendi necessitatibus nobis expedita placeat blanditiis? Voluptatem!",
+  },
 ];
 
 const Index = () => {
@@ -125,6 +160,31 @@ const Index = () => {
                 strokeColor={{ from: "#108ee9", to: "#87d068" }}
               />
               <span className={style.reviewNo}>{el.noOfReviews}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+      <div className={style.reviewSection}>
+        <div className={style.innerBox}>
+          <h1 className={style.reviewMainTitle}>Reviews</h1>
+          {reviewText.map((el) => (
+            <div className={style.reviewBox}>
+              <div>
+                <Avatar size="large" src={el.pic} icon={<UserOutlined />} />
+              </div>
+              <div className={style.reveiwTextSection}>
+                <div className={style.title}>
+                  <div className={style.userName}>{el.name}</div>
+                  <div className={style.time}>{el.time}</div>
+                </div>
+                <Rate
+                  className={style.reviewRating}
+                  disabled
+                  allowHalf
+                  defaultValue={el.rate}
+                />
+                <div className={style.reviewText}>{el.text}</div>
+              </div>
             </div>
           ))}
         </div>
